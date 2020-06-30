@@ -16,7 +16,9 @@
         <img class="Header-Logo" src="Assets/SamanthaHall_Logo.svg" />
       </div>
       <div class="Header-Buttons">
-        <div class="Header-Social-Media"><img src="Assets/social.svg" /></div>
+        <div class="Header-Social-Media">
+          <img class="Header-Social-Buttons" src="Assets/social.svg" />
+        </div>
         <div class="Header-Donate">
           <img src="Assets/donate.svg" class="Header-Cash" />
           <span class="Header-Donate-Text">Donate</span>
@@ -49,8 +51,8 @@
                   <p class="Splash-Form-Subheader">
                     Sign up to receive the latest campaign updates.
                   </p>
-                  <fieldset>
-                    <legend for="">Email</legend>
+                  <div class="Splash-Form">
+                    <legend for=""></legend>
                     <div class="form-group">
                       <input
                         class="Splash-Form-Email"
@@ -58,12 +60,12 @@
                         type="email"
                         name="emailAddress"
                         class="form-control"
+                        placeholder="Email"
                         required
                       />
                     </div>
-                  </fieldset>
-                  <fieldset>
-                    <legend for="779140491">ZIP</legend>
+
+                    <legend for="779140491"></legend>
                     <div class="form-group">
                       <input
                         class="Splash-Form-Zip"
@@ -71,22 +73,24 @@
                         type="text"
                         name="entry.1355828132"
                         class="form-control"
+                        placeholder="ZIP"
                         required
                       />
                     </div>
-                  </fieldset>
-                  <input type="hidden" name="fvv" value="1" />
-                  <input
-                    type="hidden"
-                    name="fbzx"
-                    value="-3958583123313518785"
-                  />
-                  <input
-                    class="Splash-Form-Button"
-                    class="btn btn-primary"
-                    type="submit"
-                    value="Submit"
-                  />
+
+                    <input type="hidden" name="fvv" value="1" />
+                    <input
+                      type="hidden"
+                      name="fbzx"
+                      value="-3958583123313518785"
+                    />
+                    <input
+                      class="Splash-Form-Button"
+                      class="btn btn-primary"
+                      type="submit"
+                      value="Join >"
+                    />
+                  </div>
                 </form>
               </div>
             </div>
