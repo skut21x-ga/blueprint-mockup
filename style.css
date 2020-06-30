@@ -1,21 +1,31 @@
+html,
+body {
+  margin: 0 0 0 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
 html {
   height: 100%;
-  margin: 0px;
+  margin: -10px;
   font-family: Lato;
+  background-color: rgb(62, 167, 232);
 }
 
 body {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .Header {
   background-color: rgb(62, 167, 232);
   width: 100vw;
-  height: 100px;
+  height: 110px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -23,22 +33,22 @@ body {
 }
 
 .Header-Logo-Container {
-  height: 110%;
+  height: 90%;
   width: 120px;
   margin-right: 100px;
-  margin-left: 100px;
+  margin-left: 70px;
 }
 
 .Header-Logo {
-  height: 70%;
-  margin-top: 18px;
+  height: 75px;
+  margin-top: 15px;
 }
 
 .Header-Buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 25px 25px 25px 200px;
+  margin: 27px 25px 15px 200px;
 }
 
 .Header-Social-Buttons {
@@ -159,7 +169,7 @@ body {
 
 .Splash-Form-Email {
   margin-left: -5px;
-  width: 170px;
+  width: 160px;
   padding-left: 10px;
 }
 
@@ -170,23 +180,56 @@ body {
 }
 
 .Splash-Form-Button {
-  border: 2px solid #f2a074;
+  border: 1px solid #f2a074;
   background-color: #f99c69;
   color: white;
   margin-left: 10px;
-  width: 70px;
+  width: 90px;
   border-radius: 5px;
-  height: 35.5px;
+  height: 34.5px;
 }
 
 .Footer {
-  background-color: rgb(18, 119, 174);
+  background-color: rgb(19, 119, 172);
   height: 300px;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -180px;
+  margin-top: -200px;
   padding-bottom: 20px;
+  color: white;
+  font-size: 10px;
+  padding-bottom: 200px;
+}
+
+.Footer-Logo {
+  margin-top: -100px;
+}
+
+.Footer-Text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.Privacy-Policy {
+  color: white;
+  text-decoration: underline;
+}
+
+.Footer-Box {
+  border: 0.5px solid rgba(255, 255, 255, 0.564);
+  height: 20px;
+  width: 250px;
+  margin-top: -9px;
+}
+
+.Bottom {
+  background-color: rgb(22, 31, 36);
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100vw;
+  padding-bottom: 50px;
 }
