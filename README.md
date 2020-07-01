@@ -1,4 +1,4 @@
-## Mockup for Blueprint
+## Mockup for Blueprint Interactive
 ### HTML/CSS Mockup for Blueprint Code Challenge
 
 #### Optional task completed:
