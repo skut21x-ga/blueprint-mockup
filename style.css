@@ -9,7 +9,6 @@ body {
 }
 
 html {
-  height: 100%;
   width: 100vw;
   margin: -10px;
   font-family: Lato;
@@ -19,8 +18,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-height: 1000px;
   position: absolute;
   width: 100vw;
   top: 0;
@@ -35,6 +33,8 @@ body {
   width: 100vw;
   height: 110px;
   display: flex;
+  position: absolute;
+  top: 0;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
@@ -52,7 +52,6 @@ body {
   height: 75px;
   margin-top: 15px;
 }
-
 .Header-Buttons {
   display: flex;
   justify-content: center;
@@ -60,16 +59,16 @@ body {
   margin: 27px 25px 15px 200px;
   transition: 1s ease;
 }
-
+.Footer-Social-Buttons,
 .Header-Social-Buttons {
   height: 22px;
 }
-
+.Footer-Social-Media,
 .Header-Social-Media {
   padding-left: 50px;
   margin: 20px;
 }
-
+.Footer-Donate,
 .Header-Donate {
   color: white;
   background-color: #f26c6c;
@@ -81,7 +80,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+.Footer-Donate-Text,
 .Header-Donate-Text {
   font-family: Lato;
   color: white;
@@ -91,6 +90,7 @@ body {
   margin-top: -2px;
 }
 
+.Footer-Cash,
 .Header-Cash {
   width: 18px;
   height: 18px;
@@ -101,6 +101,13 @@ body {
 
 .Splash-Container {
   height: 600px;
+  position: relative;
+  top: 0;
+  margin-top: 100px;
+  z-index: -1;
+
+  /* max-height: 600px; */
+  /* margin-bottom: 1px; */
 }
 
 .Splash-Container-Background {
@@ -222,10 +229,16 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: -200px;
+  margin-bottom: -200px;
   color: white;
   font-size: 10px;
   min-width: 100vw;
   width: 100vw;
+  min-height: 100px;
+}
+
+.Footer-Buttons {
+  display: none;
 }
 
 .Footer-Logo {
@@ -246,24 +259,18 @@ body {
   border: 0.5px solid rgba(255, 255, 255, 0.564);
   height: 20px;
   width: 250px;
-  margin-top: -9px;
+  margin-top: -12px;
+  text-align: center;
+  padding-top: 1px;
+  margin-bottom: -10px;
+  padding-bottom: 1px;
+  line-height: 18px;
 }
 
 /* Media Queries */
 @media screen and (max-width: 890px) {
   .Header-Buttons {
     margin-left: 0px;
-  }
-
-  .Splash-Header,
-  .Splash-Form-Container {
-    margin-left: -50px;
-  }
-
-  .Splash-Header {
-    font-size: 30px;
-    margin-top: 60px;
-    margin-bottom: 40px;
   }
 
   .Footer {
@@ -279,31 +286,174 @@ body {
     margin-top: 30px;
   }
 
-  .Header {
-    position: absolute;
-    top: 0;
-  }
-
-  .Footer-Box {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 800px) {
   .Splash-Header {
     font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: -50px;
   }
   .Splash-Form-Container {
     width: 300px;
+    margin-left: -50px;
+    height: 180px;
   }
   .Splash-Form {
     flex-direction: column;
   }
+  .Splash-Form-Header {
+    margin: 15px 0 15px 0;
+  }
+
   .Splash-Form-Email,
   .Splash-Form-Zip,
   .Splash-Form-Button {
     height: 25px;
     width: 90%;
     margin-left: 0px;
+  }
+
+  .Form-Bottom {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .Splash-Form-Zip {
+    width: 243px;
+    margin-left: 107.5px;
+    margin-top: 5px;
+  }
+  .Splash-Form-Button {
+    width: 100px;
+    margin-left: 107.5px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .Header-Buttons {
+    display: none;
+  }
+  .Footer-Buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -80px;
+    margin-bottom: 10px;
+    padding-top: 50px;
+  }
+  .Footer-Social-Media {
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Footer-Logo {
+    /* display: none; */
+    margin-top: 10px;
+  }
+
+  .Splash-Grid {
+    flex-direction: column;
+  }
+
+  .Splash-Person {
+    width: 30%;
+    margin-left: 0px;
+    z-index: 0;
+    margin-bottom: 50px;
+  }
+
+  .Splash-Container-Background {
+    min-width: 0px;
+    z-index: -2;
+    margin-bottom: 50px;
+  }
+  .Splash-Column-Left {
+    height: 462px;
+  }
+  .Splash-Column-Right {
+    margin-bottom: 10px;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(62, 167, 232);
+    margin-top: -135px;
+    height: 700px;
+  }
+
+  .Splash-Header {
+    text-align: center;
+    margin-left: 0px;
+    color: white;
+    margin-top: 15px;
+    width: 700vw;
+    font-size: 20px;
+  }
+
+  .Splash-Header-Sub {
+    color: white;
+  }
+
+  .Splash-Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Splash-Form-Container {
+    margin-left: 0px;
+    margin-bottom: 40px;
+    z-index: 100;
+    height: 150px;
+    box-shadow: 2px 2px 1px rgb(140, 140, 140);
+  }
+
+  .Splash-Form-Header {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .Splash-Form-Subheader {
+    text-align: center;
+  }
+  .Footer {
+    margin-top: -200px;
+    z-index: 10;
+  }
+
+  .Splash-Form-Email {
+    width: 190px;
+    margin-left: -5px;
+  }
+  .Splash-Form-Zip {
+    width: 60%;
+    margin: 0px;
+    margin-right: 5px;
+    margin-left: -5px;
+  }
+
+  .Splash-Form-Button {
+    margin: 0px;
+    margin-left: -30px;
+    margin-right: 5px;
+    border-radius: 0;
+    height: 28px;
+  }
+
+  .Form-Bottom {
+    display: flex;
+    flex-direction: row;
+    width: 77%;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-height: 300px) {
+  .Footer-Social-Media {
+    margin-top: 100px;
   }
 }
