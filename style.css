@@ -11,7 +11,7 @@ html {
   height: 100%;
   margin: -10px;
   font-family: Lato;
-  background-color: rgb(62, 167, 232);
+  background-color: rgb(19, 119, 172);
 }
 
 body {
@@ -192,16 +192,16 @@ body {
 .Footer {
   background-color: rgb(19, 119, 172);
   height: 300px;
-  width: 100vw;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: -200px;
-  padding-bottom: 20px;
   color: white;
   font-size: 10px;
-  padding-bottom: 200px;
+  min-width: 100vw;
+  width: 150vw;
 }
 
 .Footer-Logo {
@@ -225,11 +225,8 @@ body {
   margin-top: -9px;
 }
 
-.Bottom {
-  background-color: rgb(22, 31, 36);
-  position: absolute;
-  bottom: 0;
-  height: 100px;
-  width: 100vw;
-  padding-bottom: 50px;
+@media screen and (max-width: 400px) {
+  Footer {
+    padding-bottom: 500px;
+  }
 }
