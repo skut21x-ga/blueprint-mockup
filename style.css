@@ -2,17 +2,20 @@
 html,
 body {
   margin: 0 0 0 0;
-  padding: 0;
+  padding: 0px;
   border: 0;
   font-size: 100%;
   font: inherit;
+  z-index: -10;
+  max-width: 1000px;
 }
 
 html {
   width: 100vw;
-  margin: -10px;
+  height: 100vh;
   font-family: Lato;
   background-color: rgb(19, 119, 172);
+  z-index: -10;
 }
 
 body {
@@ -105,6 +108,7 @@ body {
   top: 0;
   margin-top: 100px;
   z-index: -1;
+  -webkit-transform: translate3d(0, 0, 9px);
 
   /* max-height: 600px; */
   /* margin-bottom: 1px; */
@@ -169,6 +173,7 @@ body {
   box-shadow: 2px -2px 2px rgba(234, 234, 234, 0.897);
   border-radius: 2px;
   margin-top: -25px;
+  z-index: 300;
 }
 
 .Splash-Form-Content {
@@ -235,6 +240,7 @@ body {
   min-width: 100vw;
   width: 100vw;
   min-height: 100px;
+  -webkit-transform: translate3d(0, 0, 10px);
 }
 
 .Footer-Buttons {
@@ -338,7 +344,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: -80px;
+    margin-top: -110px;
     margin-bottom: 10px;
     padding-top: 50px;
   }
@@ -373,6 +379,7 @@ body {
   .Splash-Column-Left {
     height: 462px;
   }
+
   .Splash-Column-Right {
     margin-bottom: 10px;
     z-index: 50;
@@ -381,8 +388,10 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgb(62, 167, 232);
-    margin-top: -135px;
+    margin-top: 0px;
     height: 700px;
+    transform: translate3d(0, 0px, 0px);
+    -webkit-transform: translate3d(0, -100px, 200px);
   }
 
   .Splash-Header {
@@ -407,9 +416,11 @@ body {
   .Splash-Form-Container {
     margin-left: 0px;
     margin-bottom: 40px;
+    margin-top: 220px;
     z-index: 100;
     height: 150px;
     box-shadow: 2px 2px 1px rgb(140, 140, 140);
+    -webkit-transform: translate3d(0, -250px, 100px);
   }
 
   .Splash-Form-Header {
@@ -420,9 +431,11 @@ body {
   .Splash-Form-Subheader {
     text-align: center;
   }
+
   .Footer {
     margin-top: -200px;
     z-index: 10;
+    -webkit-transform: translate3d(0px, 50px, 150px);
   }
 
   .Splash-Form-Email {
@@ -450,10 +463,36 @@ body {
     width: 77%;
     margin-top: 5px;
   }
+
+  .Footer-Logo {
+    display: none;
+  }
 }
 
 @media screen and (max-height: 300px) {
   .Footer-Social-Media {
     margin-top: 100px;
+  }
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @media {
+    .Splash-Column-Right {
+      transform: translate3d(0, 0px, 0px);
+      margin-top: -250px;
+      padding-top: 0px;
+      height: 500px;
+    }
+  }
+}
+
+@media not all and (max-width: 650px) {
+  @media {
+    .Splash-Column-Right {
+      transform: translate3d(0, 0px, 0px);
+      margin-top: 0px;
+      padding-top: 0px;
+      height: 500px;
+    }
   }
 }
