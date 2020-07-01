@@ -1,5 +1,5 @@
-## Mockup for Blueprint Interactive
-### HTML/CSS Mockup for Blueprint Code Challenge
+## Mockup
+### HTML/CSS Mockup
 
 #### Optional task completed:
 ##### Hosted via GitPages
